@@ -10,16 +10,23 @@ require("channels")
 require('jquery')
 require("jquery-datetimepicker")
 
-// Uncomment to copy all static images under ../images to the output folder and reference
-// them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
-// or the `imagePath` JavaScript helper below.
-//
-// const images = require.context('../images', true)
-// const imagePath = (name) => images(name, true)
+    // Uncomment to copy all static images under ../images to the output folder and reference
+    // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
+    // or the `imagePath` JavaScript helper below.
+    //
+    // const images = require.context('../images', true)
+    // const imagePath = (name) => images(name, true)
 
-//= require jquery
-//= require jquery_ujs
-//= require bootstrap
-//= require bindWithDelay
-//= require jquery.datetimepicker
-//= require_tree .
+    //= require jquery
+    //= require jquery_ujs
+    //= require bootstrap
+    //= require bindWithDelay
+    //= require jquery.datetimepicker
+    //= require_tree .
+
+    (document).ready(function () {
+        $("#event_when").datetimepicker({
+            maxDate: '0',
+            format: 'Y/m/d H:i'
+        });
+    });
