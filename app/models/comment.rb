@@ -12,4 +12,7 @@ class Comment < ActiveRecord::Base
 
   # NOTE: Comments belong to a user
   belongs_to :user
+
+  include PublicActivity::Model
+  tracked only: [:create], owner: proc { |_controller, model| model.user }
 end
